@@ -1,0 +1,9 @@
+package örnekler;
+
+public class örnekler {
+
+	public static void main(String[] args) {
+	
+	System.out.println(Math.sin(Math.PI/2));
+}
+}

@@ -1,0 +1,12 @@
+package örnekler;
+import java.util.*;
+public class örnekler {
+
+	public static void main(String[] args) {
+		
+		örnek2 o=new örnek2();
+		
+	    	 
+	    System.out.print(o.getArea());
+	}		 
+}

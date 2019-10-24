@@ -1,0 +1,14 @@
+package example;
+import java.util.*;
+
+		  public class Apple extends Fruit {
+		  }
+		   
+		  class Fruit {
+		    public Fruit(String name) {
+		      System.out.println("Fruit's constructor is invoked");
+		    }
+		  }
+
+	}
+}

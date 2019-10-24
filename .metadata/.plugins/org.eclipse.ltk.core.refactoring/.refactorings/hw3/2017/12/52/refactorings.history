@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;input2&apos; from expression &apos;input&apos;&#x0D;&#x0A;- Original project: &apos;hw3&apos;&#x0D;&#x0A;- Variable name: &apos;input2&apos;&#x0D;&#x0A;- Destination method: &apos;hw3.library.addBook()&apos;&#x0D;&#x0A;- Variable expression: &apos;input&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;input2&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/src&lt;hw3{library.java" name="input2" replace="true" selection="644 5" stamp="1513799400711" version="1.0"/>
+</session>

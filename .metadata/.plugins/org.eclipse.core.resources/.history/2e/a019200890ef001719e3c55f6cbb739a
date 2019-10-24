@@ -1,0 +1,18 @@
+package örnekler;
+import java.util.*;
+public class örnekler {
+
+	public static void main(String [] args) {
+		int i=(int)(Math.random()*1001);
+		int sum=0;
+		
+		while(i>0) {
+			sum=sum+i%10;
+			i/=10;
+			
+		}
+		System.out.println(sum);
+			
+		
+	}
+}

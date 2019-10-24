@@ -1,0 +1,16 @@
+package örnekler;
+
+public class örnek2 {
+	private double radius;
+	
+	public örnek2 (double radius) {
+		this.radius=radius;
+	}
+	public örnek2() {
+		this(2.0);
+	}
+	
+	public double getArea() {
+		return this.radius*this.radius*Math.PI;
+	}
+}

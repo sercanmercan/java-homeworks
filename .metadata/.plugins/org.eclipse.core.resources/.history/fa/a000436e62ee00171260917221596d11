@@ -1,0 +1,10 @@
+package örnekler;
+
+public class örnekler {
+
+	public static void main(String[] args) {
+	System.out.println(5+(Math.random()*10));
+	int i='a';
+	System.out.println(i);
+}
+}

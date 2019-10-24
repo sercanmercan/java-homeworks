@@ -1,0 +1,58 @@
+package hw3;
+import java.util.*;
+import java.lang.String;
+
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String choice,bookN,authorN,isbn;
+	//	int numPages = 0,pubYear = 0;
+	//	String [] keywords;
+		Book[] book = new Book[100];
+		
+		Scanner input=new Scanner(System.in);
+		Book b=new Book();
+		library Book=new library();
+		System.out.println("Press A to insert a book\n Press D to delete a book\n Press X to display a book\n Press Q to exit \n Your choice: ");
+		choice=input.next();
+	//	boolean control=true;
+	//	 int errcount = 0;
+		//while( choice != "Q") {
+			
+			
+			switch(choice) {
+			case "A":
+				
+		
+				bookN=input.next();
+				//book[0].setBookName(bookN);
+				System.out.println(bookN);
+				authorN=input.next();
+				//book[0].setAuthorName(authorN);
+				Book.addBook(bookN,authorN);
+				Book.print();
+				break;
+				
+			case "D":
+				
+				break;
+				
+			case "X":
+				
+				break;
+				
+			case "Q":
+				System.out.println("good bye");
+				System.exit(1);
+				break;
+			default:
+				System.out.println("Please enter high letter");
+			}
+		
+			//System.out.println("Press A to insert a book\n Press D to delete a book\n Press X to display a book\n Press Q to exit \n Your choice: ");
+			//choice=input.next();
+		}
+	//}
+}

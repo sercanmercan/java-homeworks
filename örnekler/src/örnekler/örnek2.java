@@ -1,0 +1,5 @@
+package örnekler;
+
+public class örnek2 {
+	
+}

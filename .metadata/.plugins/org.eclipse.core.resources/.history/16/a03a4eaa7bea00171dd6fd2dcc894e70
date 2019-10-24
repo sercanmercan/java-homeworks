@@ -1,0 +1,162 @@
+package hw3;
+import java.util.*;
+
+public class library {
+	boolean control=true;
+	int numberOfBooks;
+	Scanner input=new Scanner(System.in);
+	
+	String allData = " ";
+	Book[] book=new Book[100]; 
+	Book b=new Book();
+	library() {
+		numberOfBooks=0;
+	}
+	public library(int numberOfBooks) {
+		
+		this.numberOfBooks = numberOfBooks;
+		
+	}
+	
+	
+	
+	public void  addBook(String bookName, String authorName) {
+	
+		//int counter = 0;
+		//while(counter!=numberOfBooks) {
+			
+			//books[counter].setBookName(bookName);
+			//books[counter].setAuthorName(authorName);
+			//books[counter].set
+			
+	
+		String[] parts = allData.split(",");
+					
+		//	String[] parts = input2.split(","); 
+			System.out.println("sercan");
+            bookName= parts[0].substring(1, (parts[0].length()));
+            authorName = parts[0];
+        /*    isbn = parts[0];
+           // numPages = Integer.parseInt(parts[4]);
+          //  pubYear = Integer.parseInt(parts[1]);
+			
+            int x = parts.length;
+            int y = x-5;
+             keywords = new String[y];
+            for(int i = 0; i<y; i++){
+                keywords[i]=parts[i+5];
+            }
+            */
+            
+    /*         if(bookName.length()<2){
+                control=false;
+                numberOfBooks++;
+                System.out.println(numberOfBooks + ". error, in input Rule: A string field for a books name which must have at least 3 letters. Again Please:");
+            }
+
+            if(authorName.length()<3){
+                control=false;
+                numberOfBooks++;
+                System.out.println(numberOfBooks + ". error, in input Rule: A string field for a authors name which must have at least 3 letters. Again Please:");
+            }
+ 
+            if(!(isbn.length()==13)){
+                control=false;
+                numberOfBooks++;
+                System.out.println(numberOfBooks + ". error, in input Rule: A string field for 13 digit ISBN number. Again Please:");
+            }
+
+          if(numPages <= 0){
+                control=false;
+                errcount++;
+                System.out.println(errcount + ". error, in input Rule: An integer field for number of pages in the book which must be a positive number. Again Please:");
+            }
+
+            if(pubYear < 1923 || pubYear > 2016 || pubYear <= 0){
+                control=false;
+                errcount++;
+                System.out.println(errcount + ". error, in input Rule: An integer field for publication year which must be a positive number between 1923 and 2016. Again Please:");
+            }
+
+            if(keywords.length < 3 || keywords.length > 5){
+                control=false;
+                errcount++;
+                System.out.println(errcount + ". error, in input Rule: A string array for the book’s keywords which are at least 3 words and most 5 words separated by a comma. Again Please:");
+            }
+         */  
+            if(control){//Added control
+            	
+                Book o = new Book(bookName, authorName);
+                for(int n = 0; n<=book.length; n++ ){
+                    if(book[n]==null){
+                        book[n] = o;
+                        
+                        break;
+                    }//book[n]=Name(bookName);
+                }
+                System.out.println("Added!");
+                
+            }	
+			// counter++;
+		//}
+	}
+
+
+	public Book[] returnBook(String bookName) {
+		Book b=null ;
+		for(int i=0;i<book.length;i++) {
+			if(bookName==book[i].getBookName())
+				
+			b=book[i];
+			
+		}
+		return book;
+		
+		
+	}
+	public Book[] returnBookByAuthor(String authorName){
+	
+		Book b=null;
+		for(int i=0;i<book.length;i++) {
+			if(authorName==book[i].getAuthorName())
+				
+			b=book[i];
+		}
+		return book;
+		
+	}
+	
+	public Book[] BookByKeyword(String[] keyword) {
+		Book b=null;
+		for(int i=0;i<book.length;i++) {
+			if(keyword==book[i].getKeyWords())
+				
+			b=book[i];
+		}
+		return book;
+		
+	}
+	
+	public boolean deleteBook(String ISBN) {
+		return false;
+		
+	}
+	public void print() {
+		
+	/*	if(!(input.length()==1)){
+            control = false;
+            errcount++;
+            System.out.println(errcount + ". error, List in input: Just input a X character. Again Please:");
+        }*/
+        if(control){
+            for(int i = 0; i<book.length && book[i]!=null; i++){
+                book[i].displayBook();
+                System.out.println("");
+            }
+            if(book[0]==null){
+                System.out.println("Not record");
+            }
+        }
+	
+	}
+}	
